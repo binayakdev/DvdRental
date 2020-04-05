@@ -1,4 +1,4 @@
-@author: Binayak Dev Joshi<br>
+﻿@author: Binayak Dev Joshi<br>
 @author: Kushal Bhattarai<br>
 @author: Saugat Poudel<br>
 @author: Spandan Bhandari<br>
@@ -24,7 +24,7 @@ With the following features:
 
 ## Objectives
 
-* [ ] Connect the backend with the SQL server
+* [x] Connect the backend with the SQL server
 * [ ] Make the models for the database
 * [ ] Create the login, register, forgot password or others(optional)
-* Other objectives to be followed
+* Other objectives to be followed 😎
