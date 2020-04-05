@@ -1,8 +1,8 @@
-@author: Binayak Dev Joshi
-@author: Kushal Bhattarai
-@author: Saugat Poudel
-@author: Spandan Bhandari
-@Date: 4th April 2020
+@author: Binayak Dev Joshi<br>
+@author: Kushal Bhattarai<br>
+@author: Saugat Poudel<br>
+@author: Spandan Bhandari<br>
+@Date: 4th April 2020<br>
 
 # Semester2Coursework
 A .NET framework based online application to rent tracks and records from different producers and singers.
