@@ -28,3 +28,4 @@ With the following features:
 * [ ] Make the models for the database
 * [ ] Create the login, register, forgot password or others(optional)
 * Other objectives to be followed 😎
+""kushal update"
