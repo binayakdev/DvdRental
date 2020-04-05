@@ -24,7 +24,7 @@ With the following features:
 
 ## Objectives
 
-* [x] Connect the backend with the SQL server
+* [ ] Connect the backend with the SQL server
 * [ ] Make the models for the database
 * [ ] Create the login, register, forgot password or others(optional)
 * Other objectives to be followed 😎
