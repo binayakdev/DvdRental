@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Semester2Coursework",
+    "\\Semester2Coursework\\Controllers",
+    "\\Semester2Coursework\\Data"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\Semester2Coursework.sln",
   "PreviewInSolutionExplorer": false
 }
