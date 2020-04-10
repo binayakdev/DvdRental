@@ -25,10 +25,7 @@ With the following features:
 
 ## Objectives
 
-* [ ] Connect the backend with the SQL server
-* [ ] Make the models for the database
-* [ ] Create the login, register, forgot password or others(optional)
+* [x] Connect the backend with the SQL server
+* [x] Make the models for the database
+* [x] Create the login, register, forgot password or others(optional)
 * Other objectives to be followed 😎
-
-
-hello saugat
