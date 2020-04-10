@@ -126,21 +126,40 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AlbumProducersController.cs" />
+    <Compile Include="Controllers\AlbumsController.cs" />
+    <Compile Include="Controllers\ArtistAlbumsController.cs" />
     <Compile Include="Controllers\ArtistsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoansController.cs" />
+    <Compile Include="Controllers\MemberCategoriesController.cs" />
+    <Compile Include="Controllers\MembersController.cs" />
+    <Compile Include="Controllers\ProducersController.cs" />
     <Compile Include="Data\DataContext.cs" />
-    <Compile Include="Data\Models\Album.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202003010249061_InitialCreate.cs" />
-    <Compile Include="Migrations\202003010249061_InitialCreate.Designer.cs">
-      <DependentUpon>202003010249061_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202004100635406_Initial.cs" />
+    <Compile Include="Migrations\202004100635406_Initial.Designer.cs">
+      <DependentUpon>202004100635406_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004101416166_Second.cs" />
+    <Compile Include="Migrations\202004101416166_Second.Designer.cs">
+      <DependentUpon>202004101416166_Second.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004101420419_Third.cs" />
+    <Compile Include="Migrations\202004101420419_Third.Designer.cs">
+      <DependentUpon>202004101420419_Third.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Album.cs" />
+    <Compile Include="Models\AlbumProducer.cs" />
     <Compile Include="Models\Artist.cs" />
     <Compile Include="Models\ArtistAlbum.cs" />
+    <Compile Include="Models\Loan.cs" />
+    <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\MemberCategory.cs" />
+    <Compile Include="Models\Producer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +208,41 @@
     <Content Include="Views\Albums\Details.cshtml" />
     <Content Include="Views\Albums\Edit.cshtml" />
     <Content Include="Views\Albums\Index.cshtml" />
+    <Content Include="Views\Loans\Create.cshtml" />
+    <Content Include="Views\Loans\Delete.cshtml" />
+    <Content Include="Views\Loans\Details.cshtml" />
+    <Content Include="Views\Loans\Edit.cshtml" />
+    <Content Include="Views\Loans\Index.cshtml" />
+    <Content Include="Views\Members\Create.cshtml" />
+    <Content Include="Views\Members\Delete.cshtml" />
+    <Content Include="Views\Members\Details.cshtml" />
+    <Content Include="Views\Members\Edit.cshtml" />
+    <Content Include="Views\Members\Index.cshtml" />
+    <Content Include="Views\Producers\Create.cshtml" />
+    <Content Include="Views\Producers\Delete.cshtml" />
+    <Content Include="Views\Producers\Details.cshtml" />
+    <Content Include="Views\Producers\Edit.cshtml" />
+    <Content Include="Views\Producers\Index.cshtml" />
+    <Content Include="Views\MemberCategories\Create.cshtml" />
+    <Content Include="Views\MemberCategories\Delete.cshtml" />
+    <Content Include="Views\MemberCategories\Details.cshtml" />
+    <Content Include="Views\MemberCategories\Edit.cshtml" />
+    <Content Include="Views\MemberCategories\Index.cshtml" />
+    <Content Include="Views\AlbumProducers\Create.cshtml" />
+    <Content Include="Views\AlbumProducers\Delete.cshtml" />
+    <Content Include="Views\AlbumProducers\Details.cshtml" />
+    <Content Include="Views\AlbumProducers\Edit.cshtml" />
+    <Content Include="Views\AlbumProducers\Index.cshtml" />
+    <Content Include="Views\ArtistAlbums\Create.cshtml" />
+    <Content Include="Views\ArtistAlbums\Delete.cshtml" />
+    <Content Include="Views\ArtistAlbums\Details.cshtml" />
+    <Content Include="Views\ArtistAlbums\Edit.cshtml" />
+    <Content Include="Views\ArtistAlbums\Index.cshtml" />
+    <Content Include="Views\Albums1\Create.cshtml" />
+    <Content Include="Views\Albums1\Delete.cshtml" />
+    <Content Include="Views\Albums1\Details.cshtml" />
+    <Content Include="Views\Albums1\Edit.cshtml" />
+    <Content Include="Views\Albums1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -207,8 +261,14 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202003010249061_InitialCreate.resx">
-      <DependentUpon>202003010249061_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202004100635406_Initial.resx">
+      <DependentUpon>202004100635406_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004101416166_Second.resx">
+      <DependentUpon>202004101416166_Second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004101420419_Third.resx">
+      <DependentUpon>202004101420419_Third.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
