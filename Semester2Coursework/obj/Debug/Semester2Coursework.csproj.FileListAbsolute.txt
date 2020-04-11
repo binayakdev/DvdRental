@@ -278,3 +278,4 @@ D:\Year 3\Semester 5\ApplicationDevelopment\Semester2Coursework\Semester2Coursew
 D:\Year 3\Semester 5\ApplicationDevelopment\Semester2Coursework\Semester2Coursework\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\Year 3\Semester 5\ApplicationDevelopment\Semester2Coursework\Semester2Coursework\bin\Microsoft.Owin.Security.OAuth.xml
 D:\Year 3\Semester 5\ApplicationDevelopment\Semester2Coursework\Semester2Coursework\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Year 3\Semester 5\ApplicationDevelopment\Semester2Coursework\Semester2Coursework\obj\Debug\Semester2Coursework.Migrations.Fourth.resources

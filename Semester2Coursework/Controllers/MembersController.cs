@@ -18,7 +18,8 @@ namespace Semester2Coursework.Controllers
         // GET: Members
         public ActionResult Index()
         {
-            return View(db.Members.ToList());
+            var members = db.Members.Include(m => m.MemberCategorys);
+            return View(members.ToList());
         }
 
         // GET: Members/Details/5
@@ -39,6 +40,7 @@ namespace Semester2Coursework.Controllers
         // GET: Members/Create
         public ActionResult Create()
         {
+            ViewBag.MemberCategoryId = new SelectList(db.MemberCategories, "Id", "Name");
             return View();
         }
 
@@ -47,7 +49,7 @@ namespace Semester2Coursework.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name")] Member member)
+        public ActionResult Create([Bind(Include = "Id,Name,Phone,Email,DateOfBirth,MemberCategoryId")] Member member)
         {
             if (ModelState.IsValid)
             {
@@ -56,6 +58,7 @@ namespace Semester2Coursework.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.MemberCategoryId = new SelectList(db.MemberCategories, "Id", "Name", member.MemberCategoryId);
             return View(member);
         }
 
@@ -71,6 +74,7 @@ namespace Semester2Coursework.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.MemberCategoryId = new SelectList(db.MemberCategories, "Id", "Name", member.MemberCategoryId);
             return View(member);
         }
 
@@ -79,7 +83,7 @@ namespace Semester2Coursework.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name")] Member member)
+        public ActionResult Edit([Bind(Include = "Id,Name,Phone,Email,DateOfBirth,MemberCategoryId")] Member member)
         {
             if (ModelState.IsValid)
             {
@@ -87,6 +91,7 @@ namespace Semester2Coursework.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.MemberCategoryId = new SelectList(db.MemberCategories, "Id", "Name", member.MemberCategoryId);
             return View(member);
         }
 
