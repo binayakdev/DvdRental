@@ -15,17 +15,11 @@ namespace Semester2Coursework.Data
 
         public System.Data.Entity.DbSet<Semester2Coursework.Models.Artist> Artists { get; set; }
         public System.Data.Entity.DbSet<Semester2Coursework.Models.Album> Albums { get; set; }
-
         public System.Data.Entity.DbSet<Semester2Coursework.Models.Member> Members { get; set; }
-
         public System.Data.Entity.DbSet<Semester2Coursework.Models.Loan> Loans { get; set; }
-
         public System.Data.Entity.DbSet<Semester2Coursework.Models.Producer> Producers { get; set; }
-
         public System.Data.Entity.DbSet<Semester2Coursework.Models.MemberCategory> MemberCategories { get; set; }
-
         public System.Data.Entity.DbSet<Semester2Coursework.Models.AlbumProducer> AlbumProducers { get; set; }
-
         public System.Data.Entity.DbSet<Semester2Coursework.Models.ArtistAlbum> ArtistAlbums { get; set; }
     }
 }
