@@ -9,7 +9,7 @@ namespace Semester2Coursework
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-{version}.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -20,11 +20,26 @@ namespace Semester2Coursework
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+                      "~/Scripts/bootstrap.min.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/js").Include(
+                      "~/Scripts/solmusic/jquery-3.2.1.min.js",  
+                      "~/Scripts/solmusic/jquery.slicknav.min.js",
+                      "~/Scripts/solmusic/owl.carousel.min.js",
+                      "~/Scripts/solmusic/mixitup.min.js",
+                      "~/Scripts/solmusic/main.js"
+                ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/owl.carousel.min.css",
+                      "~/Content/slicknav.min.css",
+                      "~/Content/style.css"
+                      ));
+
+            bundles.Add(new StyleBundle("~/Fonts/css").Include(
+                    "~/Fonts/fontawesome.css"
+                ));
         }
     }
 }
