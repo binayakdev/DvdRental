@@ -28,4 +28,7 @@ With the following features:
 * [x] Connect the backend with the SQL server
 * [x] Make the models for the database
 * [x] Create the login, register, forgot password or others(optional)
+* [ ] Add all navigation to the navigation bar
+* [ ] Add data to the database
+* [ ] Add search functionality to the website (function 1)
 * Other objectives to be followed 😎
