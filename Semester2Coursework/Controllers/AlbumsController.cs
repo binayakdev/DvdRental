@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -16,9 +16,36 @@ namespace Semester2Coursework.Controllers
         private DataContext db = new DataContext();
 
         // GET: Albums
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder,string searchString)
         {
-            return View(db.Albums.ToList());
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+            var students = from s in db.Albums
+                           select s;
+            
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                students = students.Where(s => s.Name.Contains(searchString));
+                                       
+            }
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    students = students.OrderByDescending(s => s.Name);
+                    break;
+                case "Date":
+                    students = students.OrderBy(s => s.ReleaseDate);
+                    break;
+                case "date_desc":
+                    students = students.OrderByDescending(s => s.ReleaseDate);
+                    break;
+                default:
+                    students = students.OrderBy(s => s.Name);
+                    break;
+            }
+           
+            return View(students.ToList());
         }
 
         // GET: Albums/Details/5

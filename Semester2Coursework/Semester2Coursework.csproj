@@ -161,8 +161,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AlbumProducersController.cs" />
-    <Compile Include="Controllers\Albums1Controller.cs" />
     <Compile Include="Controllers\AlbumsController.cs" />
+    <Compile Include="Controllers\AlbumSearchController.cs" />
     <Compile Include="Controllers\ArtistAlbumsController.cs" />
     <Compile Include="Controllers\ArtistsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -187,6 +187,10 @@
     <Compile Include="Migrations\202004101420419_Third.cs" />
     <Compile Include="Migrations\202004101420419_Third.Designer.cs">
       <DependentUpon>202004101420419_Third.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004221551055_aa.cs" />
+    <Compile Include="Migrations\202004221551055_aa.designer.cs">
+      <DependentUpon>202004221551055_aa.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -400,11 +404,6 @@
     <Content Include="Views\Artists\Details.cshtml" />
     <Content Include="Views\Artists\Edit.cshtml" />
     <Content Include="Views\Artists\Index.cshtml" />
-    <Content Include="Views\Albums\Create.cshtml" />
-    <Content Include="Views\Albums\Delete.cshtml" />
-    <Content Include="Views\Albums\Details.cshtml" />
-    <Content Include="Views\Albums\Edit.cshtml" />
-    <Content Include="Views\Albums\Index.cshtml" />
     <Content Include="Views\Loans\Create.cshtml" />
     <Content Include="Views\Loans\Delete.cshtml" />
     <Content Include="Views\Loans\Details.cshtml" />
@@ -435,11 +434,6 @@
     <Content Include="Views\ArtistAlbums\Details.cshtml" />
     <Content Include="Views\ArtistAlbums\Edit.cshtml" />
     <Content Include="Views\ArtistAlbums\Index.cshtml" />
-    <Content Include="Views\Albums1\Create.cshtml" />
-    <Content Include="Views\Albums1\Delete.cshtml" />
-    <Content Include="Views\Albums1\Details.cshtml" />
-    <Content Include="Views\Albums1\Edit.cshtml" />
-    <Content Include="Views\Albums1\Index.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
@@ -471,6 +465,16 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\UserAndRoles\UserAndRoles.cshtml" />
+    <Content Include="Views\Albums\Create.cshtml" />
+    <Content Include="Views\Albums\Delete.cshtml" />
+    <Content Include="Views\Albums\Details.cshtml" />
+    <Content Include="Views\Albums\Edit.cshtml" />
+    <Content Include="Views\Albums\Index.cshtml" />
+    <Content Include="Views\AlbumSearch\Create.cshtml" />
+    <Content Include="Views\AlbumSearch\Delete.cshtml" />
+    <Content Include="Views\AlbumSearch\Details.cshtml" />
+    <Content Include="Views\AlbumSearch\Edit.cshtml" />
+    <Content Include="Views\AlbumSearch\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -484,6 +488,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004101420419_Third.resx">
       <DependentUpon>202004101420419_Third.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004221551055_aa.resx">
+      <DependentUpon>202004221551055_aa.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

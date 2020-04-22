@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -16,9 +16,15 @@ namespace Semester2Coursework.Controllers
         private DataContext db = new DataContext();
 
         // GET: ArtistAlbums
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
             var artistAlbums = db.ArtistAlbums.Include(a => a.Albums).Include(a => a.Artists);
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                artistAlbums = artistAlbums.Where(s => s.Artists.LastName.Contains(searchString));
+
+            }
             return View(artistAlbums.ToList());
         }
 
@@ -41,7 +47,7 @@ namespace Semester2Coursework.Controllers
         public ActionResult Create()
         {
             ViewBag.AlbumId = new SelectList(db.Albums, "Id", "Name");
-            ViewBag.ArtistId = new SelectList(db.Artists, "Id", "Name");
+            ViewBag.ArtistId = new SelectList(db.Artists, "Id", "LastName");
             return View();
         }
 
@@ -60,7 +66,7 @@ namespace Semester2Coursework.Controllers
             }
 
             ViewBag.AlbumId = new SelectList(db.Albums, "Id", "Name", artistAlbum.AlbumId);
-            ViewBag.ArtistId = new SelectList(db.Artists, "Id", "Name", artistAlbum.ArtistId);
+            ViewBag.ArtistId = new SelectList(db.Artists, "Id", "LastName", artistAlbum.ArtistId);
             return View(artistAlbum);
         }
 
@@ -77,7 +83,7 @@ namespace Semester2Coursework.Controllers
                 return HttpNotFound();
             }
             ViewBag.AlbumId = new SelectList(db.Albums, "Id", "Name", artistAlbum.AlbumId);
-            ViewBag.ArtistId = new SelectList(db.Artists, "Id", "Name", artistAlbum.ArtistId);
+            ViewBag.ArtistId = new SelectList(db.Artists, "Id", "LastName", artistAlbum.ArtistId);
             return View(artistAlbum);
         }
 
@@ -95,7 +101,7 @@ namespace Semester2Coursework.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.AlbumId = new SelectList(db.Albums, "Id", "Name", artistAlbum.AlbumId);
-            ViewBag.ArtistId = new SelectList(db.Artists, "Id", "Name", artistAlbum.ArtistId);
+            ViewBag.ArtistId = new SelectList(db.Artists, "Id", "LastName", artistAlbum.ArtistId);
             return View(artistAlbum);
         }
 

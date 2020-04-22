@@ -1,6 +1,6 @@
 namespace Semester2Coursework.Data
 {
-    public class DataContext : System.Data.Entity.DbContext
+    public class DataContext : Microsoft.AspNet.Identity.EntityFramework.IdentityDbContext
     {
         // You can add custom code to this file. Changes will not be overwritten.
         // 
