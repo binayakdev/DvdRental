@@ -25,10 +25,11 @@ With the following features:
 
 ## Objectives
 
-* [x] Connect the backend with the SQL server
-* [x] Make the models for the database
-* [x] Create the login, register, forgot password or others(optional)
+* [x] Connect the backend with the SQL server #binatak
+* [x] Make the models for the database and create migraton  #kushal
+* [x] Create the login, register, forgot password or others(optional)#binayak
 * [ ] Add all navigation to the navigation bar
-* [ ] Add data to the database
-* [ ] Add search functionality to the website (function 1)
+* [x] Add data to the database #saugat
+* [x] Add search functionality to the website (function 1) #kushal
+* [ ] Add search functionality to the website (function 2)
 * Other objectives to be followed 😎
