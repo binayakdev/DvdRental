@@ -18,7 +18,7 @@
 
     <!-- Navbar for the website -->
     <header class="header-section clearfix">
-        <a href="#" class="site-logo">
+        <a href="/" class="site-logo">
             <img src="~/Images/solmusic/logo.png" alt="">
         </a>
         <div class="header-right">
@@ -30,6 +30,15 @@
         </div>
         <ul class="main-menu">
             <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>
+                <a href="#">Functions</a>
+                <ul class="sub-menu">
+                    <li><a href="/Report/FilterAblumCountByArtist">Function1</a></li>
+                    <li><a href="/Report/FilterAblumSelvedCountByArtist">Function2</a></li>
+                    <li><a href="/Report/MemberLoan">Function3</a></li>
+                    <li><a href="/Report/DvdDetails">Function4</a></li>
+                </ul>
+            </li>
             <li>@Html.ActionLink("About", "About", "Home")</li>
             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
         </ul>

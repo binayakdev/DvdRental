@@ -478,6 +478,8 @@
     <Content Include="Views\Report.cshtml" />
     <Content Include="Views\Report\FilterAblumCountByArtist.cshtml" />
     <Content Include="Views\Report\FilterAblumSelvedCountByArtist.cshtml" />
+    <Content Include="Views\Report\MemberLoan.cshtml" />
+    <Content Include="Views\Report\DvdDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
