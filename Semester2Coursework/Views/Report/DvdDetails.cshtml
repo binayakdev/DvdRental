@@ -6,26 +6,38 @@
 
 <h2>DvdDetails</h2>
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Albums.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Producers.Name)
-        </th>
-        <th></th>
-    </tr>
+<div class="container mt-5 mb-5">
+    <table class="table">
+        <tr>
+            <th>
+                Album
+            </th>
+            <th>
+                Producer
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Producers.Studio)
+            </th>
+            <th>
+                Artist
+            </th>
+        </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Albums.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Producers.Name)
-        </td>
-    </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Albums.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Producers.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Producers.Studio)
+                </td>
+            </tr>
+        }
 
-</table>
+    </table>
+
+</div>

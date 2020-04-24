@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using Semester2Coursework.Data;
 using Semester2Coursework.Models;
 using Microsoft.Ajax.Utilities;
+using System.Web.UI.WebControls;
 
 namespace Semester2Coursework.Controllers
 {
@@ -15,7 +16,7 @@ namespace Semester2Coursework.Controllers
     {
         private DataContext db = new DataContext();
         // GET: Report
-        
+
 
         // Function 1
         public ActionResult FilterAblumCountByArtist(string searchString)
@@ -23,8 +24,8 @@ namespace Semester2Coursework.Controllers
             var artistAlbums = db.ArtistAlbums.Include(a => a.Albums).Include(a => a.Artists);
 
 
-            artistAlbums = artistAlbums.Where(s => s.Artists.LastName.Contains(searchString));
-            
+            artistAlbums = artistAlbums.Where(s => s.Artists.LastName.Equals(searchString));
+
 
             return View(artistAlbums.ToList());
         }
@@ -32,42 +33,56 @@ namespace Semester2Coursework.Controllers
         // Function 2
         public ActionResult FilterAblumSelvedCountByArtist(string searchString)
         {
-            
+
             var artistAlbums = db.ArtistAlbums.Include(a => a.Albums).Include(a => a.Artists);
 
 
-            artistAlbums = artistAlbums.Where(s => s.Artists.LastName.Contains(searchString));
+            artistAlbums = artistAlbums.Where(s => s.Artists.LastName.Equals(searchString));
             artistAlbums = artistAlbums.Where((s => s.Albums.SongCount > 0));
 
             return View(artistAlbums.ToList());
         }
 
-        
+
         // Function 3
         public ActionResult MemberLoan(int? memberNumber, string searchString)
         {
-            var constraint = DateTime.Now.AddDays(-31);
+            var constraint = DateTime.Now.AddDays(-100);
             var loan = db.Loans.Include(a => a.Albums).Include(a => a.Members);
 
             if (memberNumber.HasValue)
             {
                 loan = loan.Where(s => s.Members.Id.Equals(memberNumber));
             }
-            else if(!String.IsNullOrEmpty(searchString))
+            else if (!String.IsNullOrEmpty(searchString))
             {
-                loan = loan.Where(s => s.Members.Name.Contains(searchString));
+                loan = loan.Where(s => s.Members.Name.Equals(searchString));
             }
             loan = loan.Where(s => s.IssueDate >= constraint);
 
             return View(loan.ToList());
         }
 
+        public IEnumerable<Artist> Artists { get; set; }
+
         // Function 4
         public ActionResult DvdDetails()
         {
-            var albumProducer = db.AlbumProducers.Include(a => a.Albums).Include(a => a.Producers);
+            List<AlbumProducer> albumProducer = db.AlbumProducers.ToList();
+            List<ArtistAlbum> artistAlbum = db.ArtistAlbums.ToList();
 
-            return View(albumProducer.ToList());
+            var dvdDetails = (from alb in albumProducer
+                             join art in artistAlbum on alb.AlbumId equals art.AlbumId
+                             orderby alb.Albums.ReleaseDate ascending
+                             select alb).ToList();
+
+            foreach (var items in dvdDetails)
+            {
+                Console.WriteLine(items);
+            }
+            //var albumProducer = db.AlbumProducers;
+
+            return View(dvdDetails);
         }
 
     }
