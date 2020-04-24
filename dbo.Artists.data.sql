@@ -1,4 +1,21 @@
-
-
-
-select * from ArtistAlbum
+SET IDENTITY_INSERT [dbo].[Artists] ON
+INSERT INTO [dbo].[Artists] ([Id], [Email], [BirthDate], [Gender], [PhoneNumber], [FirstName], [LastName]) VALUES (2, N'martincris@gmail.com', N'1990-01-21 00:00:00', N'male', N'9860172121', N'Chris', N'martin')
+INSERT INTO [dbo].[Artists] ([Id], [Email], [BirthDate], [Gender], [PhoneNumber], [FirstName], [LastName]) VALUES (3, N'sauugat@gmail.com', N'1998-04-14 00:00:00', N'Male', N'9860401034', N'Saugat', N'poudel')
+INSERT INTO [dbo].[Artists] ([Id], [Email], [BirthDate], [Gender], [PhoneNumber], [FirstName], [LastName]) VALUES (4, N'lenonjohn@gmail.com', N'1983-01-02 00:00:00', N'male', N'98771621912', N'John', N'Lenon')
+INSERT INTO [dbo].[Artists] ([Id], [Email], [BirthDate], [Gender], [PhoneNumber], [FirstName], [LastName]) VALUES (5, N'dylanbob@gmail.com', N'1984-01-11 00:00:00', N'male', N'9866188121', N'Bob', N'Dylan')
+INSERT INTO [dbo].[Artists] ([Id], [Email], [BirthDate], [Gender], [PhoneNumber], [FirstName], [LastName]) VALUES (6, N'cobainkurt@gmail.com', N'1982-02-22 00:00:00', N'male', N'98675917219', N'Kurt', N'Cobain')
+INSERT INTO [dbo].[Artists] ([Id], [Email], [BirthDate], [Gender], [PhoneNumber], [FirstName], [LastName]) VALUES (7, N'zepledd@gmail.com', N'1968-10-22 00:00:00', N'male', N'9861717121', N'Led', N'Zeppelin')
+INSERT INTO [dbo].[Artists] ([Id], [Email], [BirthDate], [Gender], [PhoneNumber], [FirstName], [LastName]) VALUES (8, N'taymike@gmail.com', N'1956-01-21 00:00:00', N'male', N'871810016', N'Mick', N'Taylor')
+INSERT INTO [dbo].[Artists] ([Id], [Email], [BirthDate], [Gender], [PhoneNumber], [FirstName], [LastName]) VALUES (9, N'marleybob@gmail.com', N'1956-10-20 00:00:00', N'male', N'0112810012', N'Bob', N'Marley')
+INSERT INTO [dbo].[Artists] ([Id], [Email], [BirthDate], [Gender], [PhoneNumber], [FirstName], [LastName]) VALUES (10, N'roseal@gmail.com', N'1955-01-22 00:00:00', N'male', N'919167811', N'Axl', N'Rose')
+INSERT INTO [dbo].[Artists] ([Id], [Email], [BirthDate], [Gender], [PhoneNumber], [FirstName], [LastName]) VALUES (11, N'strumjoe@gmail.com', N'1962-01-22 00:00:00', N'male', N'11511781291', N'Joe', N'Strummer')
+INSERT INTO [dbo].[Artists] ([Id], [Email], [BirthDate], [Gender], [PhoneNumber], [FirstName], [LastName]) VALUES (12, N'reedlou@gmail.com', N'1950-12-28 00:00:00', N'male', N'170102791', N'Lou', N'Reed')
+INSERT INTO [dbo].[Artists] ([Id], [Email], [BirthDate], [Gender], [PhoneNumber], [FirstName], [LastName]) VALUES (13, N'horanneil@gmail.com', N'1997-01-21 00:00:00', N'male', N'112919121', N'Nial', N'Horan')
+INSERT INTO [dbo].[Artists] ([Id], [Email], [BirthDate], [Gender], [PhoneNumber], [FirstName], [LastName]) VALUES (14, N'beiningtonlive@gmail.com', N'1960-01-22 00:00:00', N'male', N'11213134111', N'Chester', N'Benington')
+INSERT INTO [dbo].[Artists] ([Id], [Email], [BirthDate], [Gender], [PhoneNumber], [FirstName], [LastName]) VALUES (15, N'planpierre@gmail.com', N'1972-09-29 00:00:00', N'male', N'991719121', N'Pierre', N'Bouvier')
+INSERT INTO [dbo].[Artists] ([Id], [Email], [BirthDate], [Gender], [PhoneNumber], [FirstName], [LastName]) VALUES (16, N'tedarryan@gmail.com', N'1990-01-22 00:00:00', N'male', N'12133562232', N'Ryan', N'Teddar')
+INSERT INTO [dbo].[Artists] ([Id], [Email], [BirthDate], [Gender], [PhoneNumber], [FirstName], [LastName]) VALUES (17, N'frusciantejohn@gmail.com', N'1943-01-22 00:00:00', N'male', N'1212123113', N'John', N'Frusciante')
+INSERT INTO [dbo].[Artists] ([Id], [Email], [BirthDate], [Gender], [PhoneNumber], [FirstName], [LastName]) VALUES (18, N'reynoldsdyan@gmail.com', N'1991-02-22 00:00:00', N'male', N'99014616142', N'Dan', N'Raynolds')
+INSERT INTO [dbo].[Artists] ([Id], [Email], [BirthDate], [Gender], [PhoneNumber], [FirstName], [LastName]) VALUES (19, N'gilmourfloydian@gmail.com', N'1961-09-12 00:00:00', N'male', N'9718171412', N'David', N'Gilmour')
+INSERT INTO [dbo].[Artists] ([Id], [Email], [BirthDate], [Gender], [PhoneNumber], [FirstName], [LastName]) VALUES (20, N'mercuryfredie@gmail.com', N'1946-12-21 00:00:00', N'male', N'61881211121', N'Freddie', N'Mercury')
+SET IDENTITY_INSERT [dbo].[Artists] OFF

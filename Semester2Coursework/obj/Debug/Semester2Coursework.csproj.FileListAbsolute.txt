@@ -390,3 +390,4 @@ C:\Users\Dell\Desktop\groupwork\Semester2Coursework\Semester2Coursework\obj\Debu
 C:\Users\Dell\Desktop\groupwork\Semester2Coursework\Semester2Coursework\obj\Debug\Semester2Coursework.dll
 C:\Users\Dell\Desktop\groupwork\Semester2Coursework\Semester2Coursework\obj\Debug\Semester2Coursework.pdb
 C:\Users\Dell\Desktop\groupwork\Semester2Coursework\Semester2Coursework\obj\Debug\Semester2Coursework.Migrations.aa.resources
+C:\Users\Dell\Desktop\groupwork\Semester2Coursework\Semester2Coursework\obj\Debug\Semester2Coursework.Migrations._new.resources

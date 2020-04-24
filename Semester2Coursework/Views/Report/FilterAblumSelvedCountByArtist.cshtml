@@ -1,0 +1,61 @@
+@model IEnumerable<Semester2Coursework.Models.ArtistAlbum>
+
+@{
+    ViewBag.Title = "FilterAblumSelvedCountByArtist";
+}
+
+<h2>FilterAblumSelvedCountByArtist</h2>
+<h2>Index</h2>
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm())
+        {
+            <p>
+                Find all by Last name: @Html.TextBox("SearchString")
+                <input type="submit" value="Search" />
+            </p>
+        }
+
+    </div>
+    <div class="col-md-8">
+
+
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+
+        <table class="table table-responsive">
+            <tr>
+                <th>
+                    Video Album Name
+                </th>
+                <th>
+                    Album Left Count
+                </th>
+                <th>
+                    Artists
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Albums.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Albums.SongCount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Artists.FirstName)
+                        @Html.DisplayFor(modelItem => item.Artists.LastName)
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+
+    </div>
+</div>

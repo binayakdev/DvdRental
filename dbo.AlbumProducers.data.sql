@@ -1,0 +1,17 @@
+SET IDENTITY_INSERT [dbo].[AlbumProducers] ON
+INSERT INTO [dbo].[AlbumProducers] ([Id], [ProducerId], [AlbumId]) VALUES (1, 1, 1)
+INSERT INTO [dbo].[AlbumProducers] ([Id], [ProducerId], [AlbumId]) VALUES (2, 2, 2)
+INSERT INTO [dbo].[AlbumProducers] ([Id], [ProducerId], [AlbumId]) VALUES (3, 3, 3)
+INSERT INTO [dbo].[AlbumProducers] ([Id], [ProducerId], [AlbumId]) VALUES (4, 4, 4)
+INSERT INTO [dbo].[AlbumProducers] ([Id], [ProducerId], [AlbumId]) VALUES (5, 5, 5)
+INSERT INTO [dbo].[AlbumProducers] ([Id], [ProducerId], [AlbumId]) VALUES (6, 6, 6)
+INSERT INTO [dbo].[AlbumProducers] ([Id], [ProducerId], [AlbumId]) VALUES (7, 7, 7)
+INSERT INTO [dbo].[AlbumProducers] ([Id], [ProducerId], [AlbumId]) VALUES (8, 8, 8)
+INSERT INTO [dbo].[AlbumProducers] ([Id], [ProducerId], [AlbumId]) VALUES (9, 9, 9)
+INSERT INTO [dbo].[AlbumProducers] ([Id], [ProducerId], [AlbumId]) VALUES (10, 10, 10)
+INSERT INTO [dbo].[AlbumProducers] ([Id], [ProducerId], [AlbumId]) VALUES (11, 11, 11)
+INSERT INTO [dbo].[AlbumProducers] ([Id], [ProducerId], [AlbumId]) VALUES (12, 12, 12)
+INSERT INTO [dbo].[AlbumProducers] ([Id], [ProducerId], [AlbumId]) VALUES (13, 13, 13)
+INSERT INTO [dbo].[AlbumProducers] ([Id], [ProducerId], [AlbumId]) VALUES (14, 16, 16)
+INSERT INTO [dbo].[AlbumProducers] ([Id], [ProducerId], [AlbumId]) VALUES (15, 17, 17)
+SET IDENTITY_INSERT [dbo].[AlbumProducers] OFF

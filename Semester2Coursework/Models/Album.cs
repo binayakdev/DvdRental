@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -15,6 +15,7 @@ namespace Semester2Coursework.Models
         [MaxLength(100)]
         public string Name { get; set; }
         public int SongCount { get; set; }
+        public bool Restriction { get; set; }
         [NotMapped]
         public HttpPostedFileBase CoverImage {get; set;}
         [MaxLength(100)]

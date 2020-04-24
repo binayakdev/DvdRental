@@ -10,7 +10,14 @@
         @using (Html.BeginForm())
         {
             <p>
-                Find by Last name: @Html.TextBox("SearchString")
+                Find all by Last name: @Html.TextBox("SearchString")
+                <input type="submit" value="Search" />
+            </p>
+        }
+        @using (Html.BeginForm())
+        {
+            <p>
+                Find Available by Last name : @Html.TextBox("SearchString2")
                 <input type="submit" value="Search" />
             </p>
         }

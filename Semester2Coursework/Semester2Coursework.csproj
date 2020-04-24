@@ -161,8 +161,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AlbumProducersController.cs" />
+    <Compile Include="Controllers\AlbumReportController.cs" />
     <Compile Include="Controllers\AlbumsController.cs" />
-    <Compile Include="Controllers\AlbumSearchController.cs" />
     <Compile Include="Controllers\ArtistAlbumsController.cs" />
     <Compile Include="Controllers\ArtistsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -171,6 +171,7 @@
     <Compile Include="Controllers\MemberCategoriesController.cs" />
     <Compile Include="Controllers\MembersController.cs" />
     <Compile Include="Controllers\ProducersController.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Controllers\UserAndRolesController.cs" />
     <Compile Include="Data\DataContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -191,6 +192,10 @@
     <Compile Include="Migrations\202004221551055_aa.cs" />
     <Compile Include="Migrations\202004221551055_aa.designer.cs">
       <DependentUpon>202004221551055_aa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004240647537_new.cs" />
+    <Compile Include="Migrations\202004240647537_new.designer.cs">
+      <DependentUpon>202004240647537_new.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -470,11 +475,9 @@
     <Content Include="Views\Albums\Details.cshtml" />
     <Content Include="Views\Albums\Edit.cshtml" />
     <Content Include="Views\Albums\Index.cshtml" />
-    <Content Include="Views\AlbumSearch\Create.cshtml" />
-    <Content Include="Views\AlbumSearch\Delete.cshtml" />
-    <Content Include="Views\AlbumSearch\Details.cshtml" />
-    <Content Include="Views\AlbumSearch\Edit.cshtml" />
-    <Content Include="Views\AlbumSearch\Index.cshtml" />
+    <Content Include="Views\Report.cshtml" />
+    <Content Include="Views\Report\FilterAblumCountByArtist.cshtml" />
+    <Content Include="Views\Report\FilterAblumSelvedCountByArtist.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -491,6 +494,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004221551055_aa.resx">
       <DependentUpon>202004221551055_aa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004240647537_new.resx">
+      <DependentUpon>202004240647537_new.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
